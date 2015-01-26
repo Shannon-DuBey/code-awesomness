@@ -1,0 +1,53 @@
+<div id="chicago" class="tab" ng-show="tabCityNav.isSet(3)" ng-controller="TabController as tabChicago">
+	<h2 class="city"><a href="javaScript:toggleDiv('locationModal');">Chicago</a></h2>
+	<section class="leftMenu">
+		<ul class="pizzaChoice">
+			<li ng-class="{active:tabChicago.isSet(2)}">
+				<a href="" ng-click="tabChicago.setTab(2)">Meat Lovers</a>
+			</li>
+			<li ng-class="{active:tabChicago.isSet(3)}">
+				<a href="" ng-click="tabChicago.setTab(3)">Salad Pie</a>
+			</li>
+			<li ng-class="{active:tabChicago.isSet(4)}">
+				<a href="" ng-click="tabChicago.setTab(4)">Cheese Lovers Pie</a>
+			</li>
+		</ul>
+		<p>*Select a Pizza above to see what toppings are included.</p>
+	</section>
+	<section class="rightContent">
+		<div class="tab" id="meat" ng-show="tabChicago.isSet(2)">
+			<h2 class="pizzaTitle">Meat Lovers</h2>
+			<ul class="toppings">
+				<li>Sausage</li>
+				<li>Pepperoni</li>
+				<li>Bacon</li>
+				<li>Beef</li>
+				<li>BBQ Chicken</li>
+			</ul>
+		</div>
+		<div class="tab" id="veggie" ng-show="tabChicago.isSet(3)">
+			<h2 class="pizzaTitle">Salad Pie</h2>
+			<ul class="toppings">
+				<li>Green Peppers</li>
+				<li>Mushrooms</li>
+				<li>Onions</li>
+				<li>Red peppers</li>
+				<li>Spinach</li>
+				<li>Olives</li>
+				<li>Sun dried tomatoes</li>
+				<li>Dill</li>
+			</ul>
+		</div>
+		<div class="tab" id="cheese" ng-show="tabChicago.isSet(4)">
+			<h2 class="pizzaTitle">Cheese Lovers Pie</h2>
+			<ul class="toppings">
+				<li>White Chedder</li>
+				<li>Asiago</li>
+				<li>Mozzarella</li>
+				<li>Chedar</li>
+			</ul>
+		</div>
+	</section>
+	<img src="images/hotPizza.jpg" class="pizzaImg"/>
+	<section class="clear"></section>
+</div>

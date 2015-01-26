@@ -1,0 +1,52 @@
+<div id="newYork" class="tab" ng-show="tabCityNav.isSet(1)" ng-controller="TabController as tabNY">
+	<h2 class="city"><a href="javaScript:toggleDiv('locationModal');">New York</a></h2>
+	<section class="leftMenu">
+		<ul class="pizzaChoice">
+			<li ng-class="{active:tabNY.isSet(2)}">
+				<a href="" ng-click="tabNY.setTab(2)">Deep MEAT Six</a>
+			</li>
+			<li ng-class="{active:tabNY.isSet(3)}">
+				<a href="" ng-click="tabNY.setTab(3)">Island Veggie</a>
+			</li>
+			<li ng-class="{active:tabNY.isSet(4)}">
+				<a href="" ng-click="tabNY.setTab(4)">Chees-a-Riffic</a>
+			</li>
+		</ul>
+		<p>*Select a Pizza above to see what toppings are included.</p>
+	</section>
+	<section class="rightContent">
+		<div class="tab" id="meat" ng-show="tabNY.isSet(2)">
+			<h2 class="pizzaTitle">Deep MEAT Six</h2>
+			<ul class="toppings">
+				<li>Sausage</li>
+				<li>Ham</li>
+				<li>Pepperoni</li>
+				<li>Bacon</li>
+				<li>Beef</li>
+				<li>BBQ Chicken</li>
+			</ul>
+		</div>
+		<div class="tab" id="veggie" ng-show="tabNY.isSet(3)">
+			<h2 class="pizzaTitle">Island Veggie</h2>
+			<ul class="toppings">
+				<li>Green Peppers</li>
+				<li>Mushrooms</li>
+				<li>Onions</li>
+				<li>Olives</li>
+				<li>Sun dried tomatoes</li>
+			</ul>
+		</div>
+		<div class="tab" id="cheese" ng-show="tabNY.isSet(4)">
+			<h2 class="pizzaTitle">Chees-a-Riffic</h2>
+			<ul class="toppings">
+				<li>Asiago</li>
+				<li>Mozzarella</li>
+				<li>Chedar</li>
+				<li>Colby</li>
+				<li>Romano</li>
+			</ul>
+		</div>
+	</section>
+	<img src="images/hotPizza.jpg" class="pizzaImg"/>
+	<section class="clear"></section>
+</div>

@@ -1,0 +1,384 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* remove dashed outlink on links & buttons */
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    outline : 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Gudea', sans-serif;
+	font-size:16px;
+	background: #fcfff4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfff4), color-stop(40%,#dfe5d7), color-stop(100%,#b3bead)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
+
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline:none;
+	color:#59a3f5;
+	font-weight:bold;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Global Styles */
+/* fonts */
+h1, h2, h3, h4 {
+	font-weight:bold;
+}
+h1 {
+	font-size:2em;
+}
+h2 {
+	font-size:1.5em;
+}
+h3 {
+	font-size:1.25em;
+}
+.bold {
+	font-weight:bold;
+}
+.italic {
+	font-style:italic;
+}
+
+/* alignments */
+.floatLeft {
+	float:left;
+}
+.floatRight {
+	float:right;
+}
+.clear {
+	clear:both;
+}
+
+/* Misc */
+.hidden {display:none;}
+
+/* === Mobile devices - Portrait (320px wide) === */
+@media only screen and (min-width : 20em) {
+	/* Main App Header */
+	.wrapper {
+		text-align:center;
+	}
+	.hero {
+		background:url('../images/heroPizzaSm.jpg') no-repeat;
+		padding:20% 0 0 0;
+		background-size:100% auto;
+		border-radius:5px;
+		margin-top:1em;
+	}
+	section#nav {
+		margin-top:2em;
+	}
+	div.hero h1, div.hero h2 {
+		color:#cfcfcf;
+	}
+	ul.cityNav {
+		text-align:center;
+	}
+	ul.cityNav li {
+		display:inline-block;
+		width:90%;
+		margin:1em auto;
+	}
+	ul.cityNav li a {
+		font-size:1.25em;
+		font-weight:bold;
+		width:8em;
+		padding:.25em 1em;
+		background-color:#666;
+		color:#333;
+		margin:.2em;
+		text-decoration:none;
+		border-radius:5px;
+		border:1px solid #333;
+	}
+	ul.cityNav li a:hover,  ul.cityNav li.active a {
+		color:#fff;
+	}
+	/* City Section */
+	section.cityInfo {
+		border:1px solid #add9e4;
+		border-top:none;
+		border-radius:5px;
+		padding:1em 2em;
+		background: #f4f2f2; /* Old browsers */
+		background: -moz-linear-gradient(top,  #f4f2f2 0%, #d9edf2 40%, #add9e4 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f2f2), color-stop(40%,#d9edf2), color-stop(100%,#add9e4)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #f4f2f2 0%,#d9edf2 40%,#add9e4 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #f4f2f2 0%,#d9edf2 40%,#add9e4 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #f4f2f2 0%,#d9edf2 40%,#add9e4 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #f4f2f2 0%,#d9edf2 40%,#add9e4 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f2f2', endColorstr='#add9e4',GradientType=0 ); /* IE6-9 */
+
+	}
+	section.disclaimer {
+		margin:2em .5em;
+		color:#FF0000;
+		font-weight:bold;
+		text-transform:uppercase;
+		line-height:1.5em;
+		border-top: 1px solid #888;
+	}
+	section#footer {
+		text-align:center;
+		padding:3em;
+	}
+
+	/* Pizzas */
+	h2.city a {
+		font-family: 'Sigmar One', cursive;
+		font-size:1.5em;
+		width:100%;
+		font-weight:bold;
+		line-height:2em;
+		color:#000;
+	}
+	section.leftMenu ul {
+		margin-right:.5em;
+		font-size:1em;
+		font-weight:bold;
+	}
+	section.leftMenu ul li a {
+		color:#cfcfcf;
+		text-decoration:none;
+		padding:.5em 1em;
+		background-color:#54543B;
+		border-radius:5px;
+		border-color:#54544B;
+		display:inline-block;
+		margin:.5em
+	}
+	div.tab section.rightContent {
+		text-align:center;
+	}
+	h2.pizzaTitle {
+		font-size:2em;
+		font-weight:bold;
+		line-height:2.5em;
+		margin-top:1em;
+		border-top:1px solid #888;
+	}
+	img.pizzaImg {
+		display:none;
+	}
+	
+	/* location Info Modal */
+	#locationModal div#modalBg {
+		position:fixed;
+		top:0;
+		left:0;
+		height:100%;
+		width:100%;
+		background-color:#000;
+		filter: alpha(opacity=80); /* internet explorer */
+		-khtml-opacity: 0.8;      /* khtml, old safari */
+		-moz-opacity: 0.8;       /* mozilla, netscape */
+		opacity: 0.8;           /* fx, safari, opera */
+	}
+	#locationModal div#modalShell {
+		position:relative;
+	    top:-25em;
+	    width:200px;
+	    background-color:#666;
+	    color: #000000;
+	    padding: 1em;
+	    z-index:199;
+	    border: 3px solid #888;
+	    border-radius: 10px;
+	}
+	#locationModal div#modalShell div.modalClose {
+		float: right;
+	    margin:-38px -43px 0 0;
+	    width: 30px;
+	    z-index: 200;
+	}
+	#locationModal div#modalShell div.contactInfo h4 {
+		line-height:2em;
+		border-top:1px solid #333;
+	}
+
+}
+
+/* === Tablet devices - Portrait (768px wide) === */
+@media only screen and (min-width : 48em) {
+	/* Main App Header */
+	.hero {
+		background:url('../images/heroPizzaMed.jpg') no-repeat;
+		padding:12% 0 11.11% 0;
+	}
+	section#nav {
+		margin-top:4em;
+	}
+	ul.cityNav li {
+		width:auto;
+	}
+	ul.cityNav li a {
+		margin:.5em;
+	}
+
+	/* Pizzas */
+	h2.city a {
+		font-size:2.5em;
+	}
+	div.tab section.leftMenu {
+		width:29%;
+		background:url('../images/pizzaMenu.jpg') no-repeat;
+		border-radius:5px;
+		text-align:right;
+		padding:2em .5em;
+		padding-bottom:13%;
+		background-size:100%;
+		float:left;
+	}
+	section.leftMenu ul li a {
+		margin:1em
+	}
+	section.leftMenu p {
+		background-color:#fff;
+		opacity:.5;
+		margin-top:2em;
+		text-align:center;
+	}
+	div.tab section.rightContent {
+		width:62.5%;
+		text-align:left;
+		margin-left:1em;
+		padding:2em .5em;
+		float:left;
+	}
+	div.tab section.rightContent {
+		text-align:left;
+		padding-left:1em;
+	}
+	h2.pizzaTitle {
+		margin-top:0;
+		border-top:none;
+	}
+	img.pizzaImg {
+		display:block;
+		position:absolute;
+		top:38em;
+		left:55%;
+	}
+
+	/* location Info Modal */
+	#locationModal div#modalShell {
+	    left:20%;
+	    width: 350px;
+	    height: 340px;
+	    border-radius: 20px;
+	}
+
+}
+
+/* === Tablet devices - Landscape (1024px wide) === */
+@media only screen and (min-width : 64em) {
+	/* Main App Header */
+	.hero {
+		background:url('../images/heroPizza.jpg') no-repeat;
+		padding:12% 0 11.11% 0;
+		background-size:100% auto;
+	}
+	section#nav {
+		margin-top:6em;
+	}
+	ul.cityNav li a {
+		font-size:1.5em;
+	}
+	
+		/* Pizzas */
+	div.tab section.leftMenu {
+		padding:3em .5em;
+	}
+	div.tab section.rightContent {
+		width:64%;
+	}
+	section.leftMenu ul {
+		margin-right:1em;
+		font-size:1.2em;
+		font-weight:bold;
+	}
+	h2.pizzaTitle {
+		font-size:2.5em;
+	}
+	img.pizzaImg {
+		display:block;
+		position:absolute;
+		top:45em;
+		left:60%;
+	}
+
+	/* location info Modal */
+	#locationModal div#modalShell {
+	    width: 500px;
+	}
+}
+
+/* === Netbook devices (1224px wide) === */
+@media only screen and (min-width : 76.5em) {
+	/* Main App Header */
+	.wrapper {
+		width:80%;
+		margin:0 auto;
+	}
+}
+

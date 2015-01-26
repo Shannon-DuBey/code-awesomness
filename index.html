@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<meta name="description" content="Pizza World">
+	<title>Pizza World</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angularPizzaWorld.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Gudea:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+
+<script>
+	function toggleDiv (divId) {
+		$("#"+divId).toggle();
+	}
+</script>
+</head>
+
+<body ng-app="pizzaWorld">
+	<section ng-controller="TabController as tabCityNav" class="wrapper">
+		<div class="hero">
+			<h1>Welcome to Pizza World</h1>
+			<h2>Please choose your city</h2>
+			<main-nav></main-nav>
+		</div>
+		<Section class="cityInfo">
+			<new-york></new-york>
+			<chicago></chicago>
+			<san-franscisco></san-franscisco>
+			
+			<div id="locationModal" class="hidden">
+				<div id="modalBg"></div>
+				<div id="modalShell">
+					<div class="modalClose"><a href="javaScript:toggleDiv('locationModal');"><img src="images/modalClose.png" /></a></div>
+					<div class="contactInfo">
+						<h3>CALL US HERE</h3>
+						<h4> New York</h4>
+						<p>(123) 456 - 789</p>
+						<p>Or stop by here:
+							<br />
+							123 Any St.
+							<br />
+							New York, NY 12345-6789
+						</p>
+
+						<h4>Chicago</h4>
+						<p>(123) 456 - 789</p>
+						<p>Or stop by here:
+							<br />
+							123 Any St.
+							<br />
+							Chicago, IL 12345-6789
+						</p>
+
+						<h4>San Franscisco</h4>
+						<p>(123) 456 - 789</p>
+						<p>Or stop by here:
+							<br />
+							123 Any St.
+							<br />
+							Chicago, IL 12345-6789
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<section class="disclaimer">
+				<p>All locations carry 3 varieties of pizza: Meat, Cheese, and Veggie.<br />*Toppings may varry</p>
+				<p>Please Select your City above to see your local options</p>
+			</section>
+		</Section>
+	</section>
+	<section id="footer">
+		<p>copywrite &copy; 2015 Shannon DuBey</p>
+	</section>
+</body>
+</html>

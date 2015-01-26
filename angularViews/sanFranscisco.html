@@ -1,0 +1,58 @@
+<div id="sanFranscisco" class="tab" ng-show="tabCityNav.isSet(2)" ng-controller="TabController as tabSF">
+	<h2 class="city"><a href="javaScript:toggleDiv('locationModal');">San Franscisco</a></h2>
+	<section class="leftMenu">
+		<ul class="pizzaChoice">
+			<li ng-class="{active:tabSF.isSet(2)}">
+				<a href="" ng-click="tabSF.setTab(2)">Market St. Meat</a>
+			</li>
+			<li ng-class="{active:tabSF.isSet(3)}">
+				<a href="" ng-click="tabSF.setTab(3)">Veggie Supreme</a>
+			</li>
+			<li ng-class="{active:tabSF.isSet(4)}">
+				<a href="" ng-click="tabSF.setTab(4)">Cheesy Classic</a>
+			</li>
+		</ul>
+		<p>*Select a Pizza above to see what toppings are included.</p>
+	</section>
+	<section class="rightContent">
+		<div class="tab" id="meat" ng-show="tabSF.isSet(2)">
+			<h2 class="pizzaTitle">Market St. Meat</h2>
+			<ul class="toppings">
+				<li>Chorizo</li>
+				<li>Serrano Ham</li>
+				<li>Pepperoni</li>
+				<li>Proscuitto</li>
+				<li>Chicken Tikka</li>
+			</ul>
+		</div>
+		<div class="tab" id="veggie" ng-show="tabSF.isSet(3)">
+			<h2 class="pizzaTitle">Veggie Supreme</h2>
+			<ul class="toppings">
+				<li>Green Peppers</li>
+				<li>Mushrooms</li>
+				<li>Onions</li>
+				<li>Avocado</li>
+				<li>Red peppers</li>
+				<li>Spinach</li>
+				<li>Olives</li>
+				<li>Sun dried tomatoes</li>
+				<li>Yellow peppers</li>
+				<li>Dill</li>
+			</ul>
+		</div>
+		<div class="tab" id="cheese" ng-show="tabSF.isSet(4)">
+			<h2 class="pizzaTitle">Cheesy Classic</h2>
+			<ul class="toppings">
+				<li>White Chedder</li>
+				<li>Asiago</li>
+				<li>Mozzarella</li>
+				<li>Chedar</li>
+				<li>Colby</li>
+				<li>Romano</li>
+				<li>Goat Cheese</li>
+			</ul>
+		</div>
+	</section>
+	<img src="images/hotPizza.jpg" class="pizzaImg"/>
+	<section class="clear"></section>
+</div>
